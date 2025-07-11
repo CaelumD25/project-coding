@@ -6,17 +6,12 @@
       class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-lg font-mono leading-relaxed text-lg space-y-4"
     >
       <p>
-        Your mission, should you choose to accept it, is to become a world-class developer— trained
-        in the arts of logic, code, and game mechanics.
+        Your mission, should you choose to accept it, is to become a games developer— trained in the
+        arts of logic, code, and game mechanics.
       </p>
 
       <p>
-        MI6 has selected you for a critical initiative: learn to build powerful, interactive
-        experiences using Unity and C#. Your training begins now.
-      </p>
-
-      <p>
-        Use this secured checklist system to track your progress through coding fundamentals, design
+        Use this checklist system to guide you in making some simple coding projects, design
         principles, and mission-critical game dev techniques.
       </p>
 
