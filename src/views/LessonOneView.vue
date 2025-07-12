@@ -1,6 +1,8 @@
 <template>
   <div class="max-w-3xl mx-auto text-gray-100">
-    <h1 class="text-3xl font-bold mb-6 text-red-500 tracking-widest">Lesson 1: Checklist</h1>
+    <h1 class="text-3xl font-bold mb-6 text-red-500 tracking-widest">
+      Lesson 1: Text-based Adventure
+    </h1>
 
     <p>
       Your first lesson is to make a simple text-based adventure game. The story can be anything you
@@ -40,9 +42,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 
-const checklist = ref([
+const STORAGE_KEY = 'lesson1-checklist'
+
+// Default checklist items
+const defaultChecklist = [
   { text: 'The game has a Beginning, Middle, and End', checked: false },
   {
     text: 'The game has an item that the player can pick up, which affects the future of the story',
@@ -56,7 +61,19 @@ const checklist = ref([
     text: "The game shows the player's input within the story",
     checked: false,
   },
-])
+]
+
+// Load from localStorage or fallback to default
+const checklist = ref(JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || defaultChecklist)
+
+// Save to localStorage whenever checklist changes
+watch(
+  checklist,
+  (newVal) => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newVal))
+  },
+  { deep: true },
+)
 
 const allChecked = computed(() => checklist.value.every((item) => item.checked))
 </script>
