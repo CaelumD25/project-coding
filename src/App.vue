@@ -6,7 +6,7 @@ const isMobile = () => {
   return window.innerWidth < 480
 }
 
-const showSide = ref(!isMobile())
+const showSide = ref(isMobile())
 
 const toggleSide = () => {
   showSide.value = !showSide.value
