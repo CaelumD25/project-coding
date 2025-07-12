@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-3xl mx-auto text-gray-100">
-    <h1 class="text-4xl font-bold mb-6 text-red-500 tracking-widest">BRIEFING</h1>
+    <h1 class="text-4xl font-bold mb-6 pt-10 text-red-500 tracking-widest">BRIEFING</h1>
 
     <div
       class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-lg font-mono leading-relaxed text-lg space-y-4"
